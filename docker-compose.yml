@@ -3,3 +3,6 @@ version: "3"
 services:
   api:
     build: ./src/api
+    environment:
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_USER: ${DATABASE_USER}
