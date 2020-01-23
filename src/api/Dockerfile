@@ -10,4 +10,4 @@ ENV DATABASE_USER ${DATABASE_USER}
 
 COPY . .
 
-RUN ["node", "index"]
+CMD ["node", "index"]
