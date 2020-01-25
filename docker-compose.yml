@@ -4,10 +4,16 @@ services:
   api:
     build: ./src/api
     environment:
-      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
-      DATABASE_PORT: ${DATABASE_PORT}
-      DATABASE_USER: ${DATABASE_USER}
+      DATABASE_PASSWORD: password # ${DATABASE_PASSWORD}
+      DATABASE_PORT: 5432 #${DATABASE_PORT}
+      DATABASE_USER: user # ${DATABASE_USER}
     volumes:
       - ./src/api:/app
     ports:
       - 8080:8080
+
+  database:
+    image: postgres:12-alpine
+    environment:
+      POSTGRES_PASSWORD: password # ${DATABASE_PASSWORD}
+      POSTGRES_USER: user # ${DATABASE_USER}
