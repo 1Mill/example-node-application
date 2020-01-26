@@ -1,4 +1,4 @@
-const { Pool, Client } = require('pg')
+const { Pool } = require('pg')
 
 const config = {
 	database: 'postgres',
@@ -7,16 +7,6 @@ const config = {
 	port: process.env.DATABASE_PORT,
 	user: process.env.DATABASE_USER,
 }
-
 const pool = new Pool(config)
-pool.query('SELECT NOW()', (err, res) => {
-	console.log(err, res)
-	pool.end();
-})
 
-const client = new Client(config)
-client.connect()
-client.query('SELECT NOW()', (err, res) => {
-	console.log(err, res)
-	client.end()
-})
+module.exports = { db: pool }
