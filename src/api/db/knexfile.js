@@ -1,4 +1,4 @@
-const { config } = require('./db')
+const { config } = require('.')
 
 const MIGRATION_DIRECTORY_PATH = '/migrations';
 const MIGRATION_TABLE_NAME = 'knex_migrations';
