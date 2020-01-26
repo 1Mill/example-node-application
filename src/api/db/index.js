@@ -1,12 +1,5 @@
 const { Pool } = require('pg')
+const { config } = './config'
 
-const config = {
-	database: 'postgres',
-	host: process.env.DATABASE_HOST, // Docker database service name
-	password: process.env.DATABASE_PASSWORD,
-	port: process.env.DATABASE_PORT,
-	user: process.env.DATABASE_USER,
-}
 const pool = new Pool(config)
-
 module.exports = { db: pool }
