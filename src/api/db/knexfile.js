@@ -1,6 +1,6 @@
 const { config } = require('.')
 
-const MIGRATION_DIRECTORY_PATH = '/migrations'; // Relative to file
+const MIGRATION_DIRECTORY_RELATIVE_PATH = '/migrations';
 const MIGRATION_TABLE_NAME = 'knex_migrations';
 
 const defaults = {
@@ -12,7 +12,7 @@ const defaults = {
 
 module.exports = {
 	migrations: {
-		directory: [MIGRATION_DIRECTORY_PATH],
+		directory: [MIGRATION_DIRECTORY_RELATIVE_PATH],
 	},
 
 	development: defaults,
