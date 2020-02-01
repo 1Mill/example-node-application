@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "migrate": "npx knex migrate:latest",
-    "migrate:rollback": "npx knex migrate:rollback",
-    "migration": "knex migrate:make",
+    "dev:migrate": "npx knex migrate:latest",
+    "dev:migrate:rollback": "npx knex migrate:rollback",
+    "dev:migration": "knex migrate:make",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
