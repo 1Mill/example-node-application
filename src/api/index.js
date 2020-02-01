@@ -1,5 +1,7 @@
 const { db } = require('./db');
 
+db.migrate()
+
 db.query('SELECT NOW()')
 	.then(res => console.log(res))
 	.catch(err => console.error(err))
