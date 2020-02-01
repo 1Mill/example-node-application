@@ -1,7 +1,5 @@
+const { MIGRATION_DIRECTORY_RELATIVE_PATH, MIGRATION_TABLE_NAME } = require('./lib/migration')
 const { config } = require('./config')
-
-const MIGRATION_DIRECTORY_RELATIVE_PATH = './db/migrations';
-const MIGRATION_TABLE_NAME = 'knex_migrations';
 
 const knex = require('knex')({
 	client: 'postgresql',
