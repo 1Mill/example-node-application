@@ -9,6 +9,7 @@ const defaults = {
 		tableName: constants.MIGRATION_TABLE_NAME,
 	},
 	pool: { min: 2, max: 10 },
+	seeds: { directory: './db/seeds' }
 }
 
 module.exports = { ...defaults }
