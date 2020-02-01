@@ -11,4 +11,4 @@ const knex = require('knex')({
 	pool: { min: 2, max: 10 },
 })
 
-module.exports = { migrate: () => { knex.migrate.latest() } }
+module.exports = { migrate: async () => await knex.migrate.latest() }
