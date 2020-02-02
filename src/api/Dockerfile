@@ -12,4 +12,4 @@ ENV DATABASE_USER ${DATABASE_USER}
 
 COPY . .
 
-CMD ["node", "index"]
+CMD ["node", "src/index"]
