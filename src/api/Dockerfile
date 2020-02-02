@@ -12,4 +12,6 @@ ENV DATABASE_USER ${DATABASE_USER}
 
 COPY . .
 
+EXPOSE 8080
+
 CMD ["node", "src/index"]
