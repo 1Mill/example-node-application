@@ -1,5 +1,5 @@
-const { config } = require('./db/config')
-const { constants } = require('./db/lib/constants')
+const { config } = require('./src/db/config')
+const { constants } = require('./src/db/lib/constants')
 
 const defaults = {
 	client: 'postgresql',
@@ -9,7 +9,7 @@ const defaults = {
 		tableName: constants.MIGRATION_TABLE_NAME,
 	},
 	pool: { min: 2, max: 10 },
-	seeds: { directory: './db/seeds' }
+	seeds: { directory: './src/db/seeds' }
 }
 
 module.exports = { ...defaults }
